@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "dependencies": {
+    "web3": "^0.20.7"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-import-assertions": "^7.20.0",
+    "@babel/register": "^7.21.0",
+    "chai": "^4.3.7",
+    "jsdom": "^21.1.1",
+    "mocha": "^10.2.0"
+  },
+  "name": "metaverse",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/index-test.js --require @babel/register --exit"
+  },
+  "keywords": [
+    "Testing",
+    "metaverse"
+  ],
+  "author": "David Giménez Morcillo",
+  "license": "ISC",
+  "description": ""
+}
