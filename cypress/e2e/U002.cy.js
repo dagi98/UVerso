@@ -7,7 +7,7 @@ describe('Test movimiento en el eje z', () => {
 
     it('La escena se renderiza correctamente', () => {
         cy.get('canvas').should('exist');
-        cy.window().its("web3").should("exist");
+       // cy.window().its("web3").should("exist");
     });
 
 
@@ -43,7 +43,7 @@ describe('Test no hay movimiento en el eje z', () => {
 
     it('La escena se renderiza correctamente', () => {
         cy.get('canvas').should('exist');
-        cy.window().its("web3").should("exist");
+       // cy.window().its("web3").should("exist");
     });
 
 

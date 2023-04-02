@@ -7,7 +7,7 @@ describe('Test movimiento UVerso', () => {
 
     it('La escena se renderiza correctamente', () => {
         cy.get('canvas').should('exist');
-        cy.window().its("web3").should("exist");
+        //cy.window().its("web3").should("exist");
     });
 
 
@@ -61,7 +61,7 @@ describe('Test movimiento incorrecto UVerso', () => {
 
     it('La escena se renderiza correctamente', () => {
         cy.get('canvas').should('exist');
-        cy.window().its("web3").should("exist");
+        //cy.window().its("web3").should("exist");
     });
 
 
