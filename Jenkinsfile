@@ -1,8 +1,9 @@
 pipeline {
-  ansiColor('xterm') // Aplica colores ANSI en todo el archivo
+  
   agent { label 'principal1' }
   options {
     skipDefaultCheckout true
+    ansiColor('xterm') // Aplica colores ANSI en todo el archivo
   }
   parameters {
     string(name: 'FOLDER', defaultValue: 'cypress/e2e')
