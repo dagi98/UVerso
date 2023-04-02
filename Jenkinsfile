@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'principal' }
+    agent { label 'principal1' }
     options {
         skipDefaultCheckout true
         ansiColor(['xterm'])
@@ -32,7 +32,7 @@ pipeline {
 
    post {
     always {
-      node('principal') {
+      node('principal2') {
         publishHTML(target: [
           allowMissing: false,
           alwaysLinkToLastBuild: true,
