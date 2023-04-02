@@ -1,8 +1,8 @@
 pipeline {
     agent { label 'principal1' }
     options {
-        skipDefaultCheckout true
-        ansiColor(['xterm'])
+       // skipDefaultCheckout true
+        //ansiColor(['xterm'])
     }
     parameters {
     string(name: 'FOLDER', defaultValue: 'cypress/e2e')
@@ -30,7 +30,7 @@ stages {
         }
     }
 }
-
+/*
    post {
     always {
       node('principal1') {
@@ -46,3 +46,4 @@ stages {
     }
   }
 }
+*/
