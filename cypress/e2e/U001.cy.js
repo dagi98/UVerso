@@ -10,7 +10,7 @@ describe('Test movimiento UVerso', () => {
         //cy.window().its("web3").should("exist");
     });
 
-
+/*
 
     it('La camara se mueve dirección descendente', () => {
 
@@ -59,7 +59,7 @@ describe('Test movimiento incorrecto UVerso', () => {
         cy.visit('http://127.0.0.1:5500/');
     });
 
-    it.only('La escena se renderiza correctamente', () => {
+    it('La escena se renderiza correctamente', () => {
         cy.get('canvas').should('exist');
         //cy.window().its("web3").should("exist");
     });
@@ -92,7 +92,7 @@ describe('Test movimiento incorrecto UVerso', () => {
 
 
 });
-
+*/
 
 /*      it('moves camera correctly with arrow keys', () => {
             cy.get('canvas').trigger('keydown', { keyCode: 38 });
