@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    options {
+        skipDefaultCheckout true
+    }
     parameters {
         string(name: 'FOLDER', defaultValue: 'cypress/e2e')
         choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'])
