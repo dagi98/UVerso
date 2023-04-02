@@ -1,9 +1,9 @@
 import KeyInput from "./KeyInput.js";
-import connect from "./Connect.js";
+//import connect from "./Connect.js";
 
 
 
-connect.then(() => { });
+//connect.then(() => { });
 const keyInput = new KeyInput();
 
 const ratio = window.innerWidth / window.innerHeight;
@@ -135,7 +135,7 @@ connect.then((result) => {
     });
 });*/
 
-connect.then((result) => {
+/*connect.then((result) => {
     console.log(result);
     result.buildings.forEach((b, index) => {
         if (index <= result.supply) {
@@ -147,7 +147,7 @@ connect.then((result) => {
             scene.add(box);
         }
     });
-});
+});*/
 
 const url = 'http://127.0.0.1:5500/index.html';
 
