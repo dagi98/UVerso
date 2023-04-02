@@ -1,9 +1,9 @@
 pipeline {
   agent { label 'principal1' }
-    //options {
-       // skipDefaultCheckout true
+    options {
+        skipDefaultCheckout true
         //ansiColor(['xterm'])
-    //}
+    }
     parameters {
     string(name: 'FOLDER', defaultValue: 'cypress/e2e')
     choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'])
@@ -31,18 +31,18 @@ stages {
     }
 }
 
-//   post {
-  //  always {
-    //  node('principal1') {
-      //  publishHTML(target: [
-        //  allowMissing: false,
-          //alwaysLinkToLastBuild: true,
-          //keepAll: true,
-          //reportDir: 'reportes',
-          //reportFiles: 'index.html',
-          //reportName: 'JaCoCo Coverage Report'
-        //])
-      //}
-    //}
-  //}
+   post {
+    always {
+      node('principal1') {
+        publishHTML(target: [
+          allowMissing: false,
+          alwaysLinkToLastBuild: true,
+          keepAll: true,
+          reportDir: 'reportes',
+          reportFiles: 'index.html',
+          reportName: 'JaCoCo Coverage Report'
+        ])
+      }
+    }
+  }
 }
