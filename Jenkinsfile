@@ -1,9 +1,9 @@
 pipeline {
     agent { label 'principal1' }
-    options {
+    //options {
        // skipDefaultCheckout true
         //ansiColor(['xterm'])
-    }
+    //}
     parameters {
     string(name: 'FOLDER', defaultValue: 'cypress/e2e')
     choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'])
