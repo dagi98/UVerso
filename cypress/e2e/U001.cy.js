@@ -10,7 +10,7 @@ describe('Test movimiento UVerso', () => {
         //cy.window().its("web3").should("exist");
     });
 
-/*
+
 
     it('La camara se mueve dirección descendente', () => {
 
@@ -92,7 +92,7 @@ describe('Test movimiento incorrecto UVerso', () => {
 
 
 });
-*/
+
 
 /*      it('moves camera correctly with arrow keys', () => {
             cy.get('canvas').trigger('keydown', { keyCode: 38 });
@@ -114,4 +114,5 @@ describe('Test movimiento incorrecto UVerso', () => {
             cy.get('canvas').then(() => {
             cy.get('.log-preview span').contains('"result":');
         });
-    });*/
+    });
+    */
