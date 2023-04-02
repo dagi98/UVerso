@@ -30,19 +30,19 @@ stages {
         }
     }
 }
-/*
-   post {
-    always {
-      node('principal1') {
-        publishHTML(target: [
-          allowMissing: false,
-          alwaysLinkToLastBuild: true,
-          keepAll: true,
-          reportDir: 'reportes',
-          reportFiles: 'index.html',
-          reportName: 'JaCoCo Coverage Report'
-        ])
-      }
-    }
-  }
-}
+
+//   post {
+  //  always {
+    //  node('principal1') {
+      //  publishHTML(target: [
+        //  allowMissing: false,
+          //alwaysLinkToLastBuild: true,
+          //keepAll: true,
+          //reportDir: 'reportes',
+          //reportFiles: 'index.html',
+          //reportName: 'JaCoCo Coverage Report'
+        //])
+      //}
+    //}
+  //}
+//}
