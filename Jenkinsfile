@@ -32,7 +32,7 @@ pipeline {
 
    post {
     always {
-      node {
+      node('principal') {
         publishHTML(target: [
           allowMissing: false,
           alwaysLinkToLastBuild: true,
