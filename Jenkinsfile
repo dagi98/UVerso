@@ -1,37 +1,37 @@
 pipeline {
+  ansiColor('xterm') // Aplica colores ANSI en todo el archivo
   agent { label 'principal1' }
-    options {
-        skipDefaultCheckout true
-        ansiColor(['xterm'])
-    }
-    parameters {
+  options {
+    skipDefaultCheckout true
+  }
+  parameters {
     string(name: 'FOLDER', defaultValue: 'cypress/e2e')
     choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'])
     string(name: 'SPEC', defaultValue: 'cypress/e2e/')
-}
+  }
 
-stages {
+  stages {
     stage('Build') {
-        steps {
-            echo "Building application"
-        }
+      steps {
+        echo "Building application"
+      }
     }
 
     stage('Testing') {
-        steps {
-            bat "npm i"
-            bat "npx cypress run --browser ${BROWSER} --spec $SPEC"
-        }
+      steps {
+        bat "npm i"
+        bat "npx cypress run --browser ${BROWSER} --spec $SPEC"
+      }
     }
 
     stage('Deploy') {
-        steps {
-            echo "Desplegando aplicación"
-        }
+      steps {
+        echo "Desplegando aplicación"
+      }
     }
-}
+  }
 
-   post {
+  post {
     always {
       node('principal1') {
         publishHTML(target: [
