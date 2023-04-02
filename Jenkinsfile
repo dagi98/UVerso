@@ -3,7 +3,7 @@ def AGENT_LABEL = null
 node('master') {
   stage('Checkout and set agent'){
      checkout scm
-     ### Or just use any other approach to figure out agent label: read file, etc
+    // ### Or just use any other approach to figure out agent label: read file, etc
      if (env.BRANCH_NAME == 'master') {
         AGENT_LABEL = "prod"
      } else {
