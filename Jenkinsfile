@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'principal1' }
+    agent { label 'principal' }
     //options {
        // skipDefaultCheckout true
         //ansiColor(['xterm'])
