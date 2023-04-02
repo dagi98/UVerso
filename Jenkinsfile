@@ -38,7 +38,7 @@ stages {
           allowMissing: false,
           alwaysLinkToLastBuild: true,
           keepAll: true,
-          reportDir: 'target/site/jacoco/',
+          reportDir: 'reportes',
           reportFiles: 'index.html',
           reportName: 'JaCoCo Coverage Report'
         ])
