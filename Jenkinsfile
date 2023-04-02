@@ -7,7 +7,7 @@ pipeline {
     parameters {
     string(name: 'FOLDER', defaultValue: 'cypress/e2e')
     choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'])
-    string(name: 'SPEC', defaultValue: 'C:/Users/davig/OneDrive/Desktop/metaverse/cypress/e2e/')
+    string(name: 'SPEC', defaultValue: 'cypress/e2e/')
 }
 
 stages {
