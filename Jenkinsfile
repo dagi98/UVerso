@@ -2,7 +2,7 @@ pipeline {
   agent { label 'principal1' }
     options {
         skipDefaultCheckout true
-        //ansiColor(['xterm'])
+        ansiColor(['xterm'])
     }
     parameters {
     string(name: 'FOLDER', defaultValue: 'cypress/e2e')
@@ -38,7 +38,7 @@ stages {
           allowMissing: false,
           alwaysLinkToLastBuild: true,
           keepAll: true,
-          reportDir: 'reportes',
+          reportDir: 'C:/Users/davig/OneDrive/Desktop/metaverse/reportes',
           reportFiles: 'index.html',
           reportName: 'JaCoCo Coverage Report'
         ])
