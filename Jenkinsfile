@@ -2,14 +2,11 @@ pipeline {
     agent any
     options {
         skipDefaultCheckout true
+        ansiColor(['xterm'])
     }
     parameters {
         string(name: 'FOLDER', defaultValue: 'cypress/e2e')
         choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'])
-    }
-
-    options {
-        ansiColor(['xterm'])
     }
 
     stages {
