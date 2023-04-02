@@ -59,7 +59,7 @@ describe('Test movimiento incorrecto UVerso', () => {
         cy.visit('http://127.0.0.1:5500/');
     });
 
-    it('La escena se renderiza correctamente', () => {
+    it.only('La escena se renderiza correctamente', () => {
         cy.get('canvas').should('exist');
         //cy.window().its("web3").should("exist");
     });
