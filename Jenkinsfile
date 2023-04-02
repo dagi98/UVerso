@@ -7,7 +7,7 @@ pipeline {
     parameters {
     string(name: 'FOLDER', defaultValue: 'cypress/e2e')
     choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'])
-    string(name: 'SPEC', defaultValue: '')
+    string(name: 'SPEC', defaultValue: 'cypress/e2e/U001.cy.js')
 }
 
 stages {
