@@ -3,7 +3,7 @@ pipeline {
   agent { label 'principal1' }
   options {
     skipDefaultCheckout true
-    ansiColor('vga') // Aplica colores ANSI en todo el archivo
+    ansiColor('css') // Aplica colores ANSI en todo el archivo
   }
   parameters {
     string(name: 'FOLDER', defaultValue: 'cypress/e2e')
