@@ -30,18 +30,18 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            publishHTML(
-                allowMissing: false,
-                alwaysLinkToLastBuild: false,
-                keepAll: true,
-                reportDir: 'cypress/report',
-                reportFiles: 'index.html',
-                reportName: 'HTML Report',
-                reportTitles: '',
-                useWrapperFileDirectly: true
-            )
-        }
+   post {
+    always {
+      node {
+        publishHTML(target: [
+          allowMissing: false,
+          alwaysLinkToLastBuild: true,
+          keepAll: true,
+          reportDir: 'target/site/jacoco/',
+          reportFiles: 'index.html',
+          reportName: 'JaCoCo Coverage Report'
+        ])
+      }
     }
+  }
 }
