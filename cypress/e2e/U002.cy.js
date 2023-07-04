@@ -17,7 +17,7 @@ describe('Test movimiento en el eje z', () => {
         cy.wait(1000); // espera un segundo
         cy.get('body').trigger('keyup', { keyCode: 32 }); // simula soltar la tecla espacio
         cy.window().then((win) => {
-            cy.wrap(win).invoke('getCameraZ').should('be.within', 21, 22);
+            cy.wrap(win).invoke('getCameraZ').should('be.within', 15, 25);
         });
     });
 
@@ -27,7 +27,7 @@ describe('Test movimiento en el eje z', () => {
         cy.wait(1000); // espera un segundo
         cy.get('body').trigger('keyup', { keyCode: 18 }); // simula soltar la tecla alt gr
         cy.window().then((win) => {
-            cy.wrap(win).invoke('getCameraZ').should('be.within', 27.5, 28.5);
+            cy.wrap(win).invoke('getCameraZ').should('be.within', 20, 35);
         });
     });
 

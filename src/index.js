@@ -1,9 +1,9 @@
 import KeyInput from "./KeyInput.js";
-//import connect from "./Connect.js";
+import connect from "./Connect.js";
 
 
 
-//connect.then(() => { });
+connect.then(() => { });
 const keyInput = new KeyInput();
 
 const ratio = window.innerWidth / window.innerHeight;
@@ -102,7 +102,7 @@ loader.load('./model (1).json', function (object) {
 
 
 animate();
-/*
+
 connect.then((result) => {
     console.log(result);
     result.buildings.forEach((b, index) => {
@@ -116,7 +116,7 @@ connect.then((result) => {
         }
 
     });
-});*/
+});
 
 
 /*

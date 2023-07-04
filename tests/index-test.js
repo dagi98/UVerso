@@ -56,3 +56,4 @@ describe('countPressedKeys', function() {
     assert.equal(countPressedKeys(), 2);
   });
 });
+
