@@ -4,9 +4,9 @@ let web3;
 let contract;
 
 const connect = new Promise((resolve, reject) => {
-  if (typeof window.ethereum == "undefined") {
+  /*if (typeof window.ethereum == "undefined") {
     reject("MetaMask is not installed");
-  }
+  }*/
   window.ethereum.enable().then(() => {
     web3 = new Web3(window.ethereum);
     contract = new web3.eth.Contract(abi,"0x360E00247d93286feAe901B27a92Be36DdBFa951");
