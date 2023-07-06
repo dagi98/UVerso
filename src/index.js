@@ -102,22 +102,22 @@ loader.load('./model (1).json', function (object) {
 
 
 animate();
-/*
-connect.then((result) => {
-    console.log(result);
-    result.buildings.forEach((b, index) => {
-        if (index <= result.supply) {
+
+//connect.then((result) => {
+  //  console.log(result);
+    //result.buildings.forEach((b, index) => {
+      //  if (index <= result.supply) {
             const BoxGeometry = new THREE.BoxGeometry(3, 3, 3);
             const BoxMaterial = new THREE.MeshPhongMaterial({ color: 0xFF2301 });
             const box = new THREE.Mesh(BoxGeometry, BoxMaterial);
             box.position.set(0, 0, 22);
 
             scene.add(box);
-        }
+        //}
 
-    });
-});
-*/
+    //});
+//});
+
 
 /*
 connect.then((result) => {
