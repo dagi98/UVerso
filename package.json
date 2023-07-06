@@ -32,7 +32,7 @@
 
     "test": "mocha tests/index-test.js --require @babel/register --exit",
 
-    "cytest": "cypress run --browser chrome --spec 'cypress/e2e'"
+    "cytest": "cypress run --browser chrome --spec 'cypress/e2e' --headed" 
 
   },
 
@@ -48,7 +48,13 @@
 
   "license": "ISC",
 
-  "description": ""
+  "description": "",
+
+  "cypress": {
+    "chromeWebSecurity": false,
+    "cleanRun": false
 
 }
+}
+
 

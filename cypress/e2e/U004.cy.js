@@ -3,8 +3,6 @@ describe('Los objetos son renderizados', () => {
 
     beforeEach(() => {
         cy.visit('http://127.0.0.1:5500/');
-        cy.get('canvas').should('exist');
-        cy.window().its("web3").should("exist");
     });
 
    

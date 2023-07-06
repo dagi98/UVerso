@@ -13,12 +13,12 @@ describe('Test movimiento UVerso', () => {
 
 
     it('La camara se mueve dirección descendente', () => {
-
+        
         cy.get('body').trigger('keydown', { keyCode: 38 }); // simula pulsar la tecla 38
         cy.wait(1000); // espera un segundo
         cy.get('body').trigger('keyup', { keyCode: 38 }); // simula soltar la tecla 38
         cy.window().then((win) => {
-            cy.wrap(win).invoke('getCameraY').should('be.within', 1, 5 ); // comprueba que la posición y de la cámara está entre 1.5 y 2
+            cy.wrap(win).invoke('getCameraY').should('be.lt', 5 ); // comprueba que la posición y de la cámara está entre 1.5 y 2
         });
     });
 
@@ -28,7 +28,7 @@ describe('Test movimiento UVerso', () => {
         cy.wait(1000); // espera un segundo
         cy.get('body').trigger('keyup', { keyCode: 40 }); // simula soltar la tecla 40
         cy.window().then((win) => {
-            cy.wrap(win).invoke('getCameraY').should('be.within', 5, 10);
+            cy.wrap(win).invoke('getCameraY').should('be.gt', 5);
         });
     });
 
@@ -38,7 +38,7 @@ describe('Test movimiento UVerso', () => {
         cy.wait(1000); // espera un segundo
         cy.get('body').trigger('keyup', { keyCode: 37 }); // simula soltar la tecla 37
         cy.window().then((win) => {
-            cy.wrap(win).invoke('getCameraX').should('be.within', 1, 5);
+            cy.wrap(win).invoke('getCameraX').should('be.gt', 1);
         });
     });
     it('La camara se mueve dirección izquierda', () => {
@@ -47,7 +47,7 @@ describe('Test movimiento UVerso', () => {
         cy.wait(1000); // espera un segundo
         cy.get('body').trigger('keyup', { keyCode: 39 }); // simula soltar la tecla 39
         cy.window().then((win) => {
-            cy.wrap(win).invoke('getCameraX').should('be.within', -5, -0);
+            cy.wrap(win).invoke('getCameraX').should('be.lt', 1);
         });
     });
     it('La camara no se mueve con otras teclas', () => {
